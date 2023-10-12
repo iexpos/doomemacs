@@ -543,7 +543,7 @@ windows, switch to `doom-fallback-buffer'. Otherwise, delegate to original
            (emoji-font (or doom-emoji-font
                            (cl-find-if fn doom-emoji-fallback-font-families))))
       (when symbol-font
-        (dolist (script '(symbol mathematical))
+        (dolist (script '(symbol mathematical unicode))
           (set-fontset-font t script symbol-font)))
       (when emoji-font
         (set-fontset-font t 'emoji emoji-font)
